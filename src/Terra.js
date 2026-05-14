@@ -3,8 +3,11 @@ import * as THREE from 'three';
 import imagemTerra from './assets/terra.jpg';
 
 export function criarTerra() {
-    // Mesma geometria de Marte
-    const geometry = new THREE.SphereGeometry(1.5, 64, 64);
+
+    const relogioTerra = new THREE.Clock();
+    
+    
+    const geometry = new THREE.SphereGeometry(4.2 , 64, 64);
     
     // Cor azul para representar a Terra
     const material = new THREE.MeshStandardMaterial({ color: 0xffffff }); 
@@ -15,7 +18,9 @@ export function criarTerra() {
     material.map = texturaTerra; // Aplica a textura
     
     //Joga a terra pro lado pra n fundir com marte, q é o 000
-    terra.position.x = 8; 
+    // terra.position.x = 90; 
+
+
 
     return terra;
 }
