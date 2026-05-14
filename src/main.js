@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import './style.css'; // Certifique-se de ter o style.css para remover margens
+import { criarTerra } from './Terra.js';
 
 // --- 1. CONFIGURAÇÃO DA CENA E RENDERIZADOR ---
 const scene = new THREE.Scene();
@@ -32,6 +33,10 @@ const geometry = new THREE.SphereGeometry(1.5, 64, 64);
 const material = new THREE.MeshStandardMaterial({ color: 0xff0000 }); // Vermelho sólido
 const planet = new THREE.Mesh(geometry, material);
 scene.add(planet);
+
+//Cria o planeta terra com textura e coloca na cena
+const planetaTerra = criarTerra();
+scene.add(planetaTerra);
 
 // --- 4. ILUMINAÇÃO (Necessária para ver a cor/forma) ---
 const pointLight = new THREE.PointLight(0xffffff, 10);
