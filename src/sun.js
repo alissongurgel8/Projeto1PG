@@ -66,16 +66,16 @@ export function criarSol(scene) {
     uniforms: { uTime: { value: 0.0 } }
   });
 
-  const geometriaSol = new THREE.SphereGeometry(2.5, 128, 128); 
+  const geometriaSol = new THREE.SphereGeometry(40, 128, 128);
   const sol = new THREE.Mesh(geometriaSol, materialSol);
-  sol.position.set(0, 0, 0); 
-  
+  sol.position.set(0, 0, 0);
+
   // Adiciona o Sol na cena que veio do main.js
   scene.add(sol);
 
   // Retorna uma função que será chamada todo frame para animar
   return function animarSol() {
     materialSol.uniforms.uTime.value = relogioSol.getElapsedTime();
-    sol.rotation.y += 0.005;
+    sol.rotation.y += 0.001;
   };
 }

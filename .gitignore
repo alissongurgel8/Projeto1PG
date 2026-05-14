@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+package-lock.json
+package.json
+.venv/*
+.venv/
+.venv
+venv/*
+venv/
+venv/lib/*
+.venv/lib/*
