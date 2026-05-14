@@ -1,6 +1,6 @@
 # Projeto 1 - Processamento Gráfico (PG)
 
-Este repositório contém a implementação do Primeiro Projeto da disciplina de Processamento/Computação Gráfica. O projeto consiste em uma cena virtual em 3D que demonstra a aplicação de conceitos fundamentais de renderização, manipulação de câmeras, texturização e programação de shaders.
+Este repositório contém a implementação do Primeiro Projeto da disciplina de Processamento Gráfico. O projeto consiste em uma cena em 3D que representa o sistema solar local
 
 ---
 
@@ -29,7 +29,7 @@ O projeto atende a todos os requisitos solicitados na especificação:
 Nesta seção estão descritos os detalhes do que foi construído na cena:
 
 * **Objetos 3D:** Foram criados ao total 9 objetos, sendo os 8 planetas do sistema solar e o sol
-* **Implementação do Shader:** O sol foi criado usando um shader prório, que pode ser encontrado no arquivo sun.js. O Shader foi 
+* **Implementação do Shader:** O sol foi criado usando um shader prório, que pode ser encontrado no arquivo sun.js
     1.  **Câmera 1 (Principal):** Esta câmera é livre e pode ser movimentada usando o mouse.
     2.  **Câmera 2:** Esta câmera está posicionada de forma TopDown e é fixa
     3.  **Câmera 3:** Esta câmera está posicionada de forma lateral aos planetas e é fixa.
