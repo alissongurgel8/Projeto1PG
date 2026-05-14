@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import './style.css'; // Certifique-se de ter o style.css para remover margens
 import { criarTerra } from './Terra.js';
+import { criarSol } from './sun.js';
 
 // --- 1. CONFIGURAÇÃO DA CENA E RENDERIZADOR ---
 const scene = new THREE.Scene();
@@ -14,11 +15,11 @@ document.querySelector('#app').appendChild(renderer.domElement);
 
 // Câmera 1: Perspectiva (Livre com mouse)
 const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera1.position.set(0, 2, 5);
+camera1.position.set(0, 4, 16);
 
 // Câmera 2: Topo (Visão de cima)
 const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera2.position.set(0, 7, 0);
+camera2.position.set(0, 15, 0);
 camera2.lookAt(0, 0, 0);
 
 // Controle de qual câmera está ativa
@@ -32,11 +33,15 @@ const controls = new OrbitControls(camera1, renderer.domElement);
 const geometry = new THREE.SphereGeometry(1.5, 64, 64);
 const material = new THREE.MeshStandardMaterial({ color: 0xff0000 }); // Vermelho sólido
 const planet = new THREE.Mesh(geometry, material);
+planet.position.set(15, 0, 0);
 scene.add(planet);
 
 //Cria o planeta terra com textura e coloca na cena
 const planetaTerra = criarTerra();
 scene.add(planetaTerra);
+
+//Sol
+const atualizarSol = criarSol(scene);
 
 // --- 4. ILUMINAÇÃO (Necessária para ver a cor/forma) ---
 const pointLight = new THREE.PointLight(0xffffff, 10);
@@ -74,6 +79,8 @@ function animate() {
 
     // Movimento simples de rotação (Requisito atendido)
     planet.rotation.y += 1;
+
+    atualizarSol();
 
     // Renderiza a cena com a câmera ativa no momento
     renderer.render(scene, activeCamera);
