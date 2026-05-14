@@ -17,7 +17,7 @@ Este repositório contém a implementação do Primeiro Projeto da disciplina de
 O projeto atende a todos os requisitos solicitados na especificação:
 
 - [x] **Múltiplos Objetos 3D:** Visualização de pelo menos um objeto 3D por membro do grupo. Cada objeto foi redimensionado e posicionado individualmente no ambiente virtual.
-- [x] **Shader Customizado:** Utilização de um shader próprio (Vertex/Fragment) em pelo menos um dos objetos.
+- [x] **Shader Customizado:** Utilização de um shader próprio em pelo menos um dos objetos.
 - [x] **Múltiplas Câmeras:** Definição e configuração de pelo menos duas câmeras na cena.
 - [x] **Animação:** Implementação de movimento simples em pelo menos um objeto da cena.
 - [x] **Texturização:** Aplicação de textura mapeada em pelo menos um objeto.
