@@ -101,7 +101,7 @@ function criarLinhaOrbita(distancia) {
 
 
 function criarEstrelas() {
-    const quantidadeEstrelas = 30000;
+    const quantidadeEstrelas = 25000;
     
     // BufferGeometry é super otimizado para lidar com milhares de pontos
     const geometriaEstrelas = new THREE.BufferGeometry();
