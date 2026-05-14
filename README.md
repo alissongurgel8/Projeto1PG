@@ -43,7 +43,7 @@ Para navegar e interagir com a cena virtual, utilize os seguintes controles:
 
 * **Mouse (Botão Esquerdo):** Segure e mova o mouse para moviementar a câmera
 * **Mouse (Scroll):** Use para aumentar ou diminuir o zoom na câmera livre
-* **Tecla `[C]` ** Use para trocar entre os modos de câmera
+* **Tecla C:** Use para trocar entre os modos de câmera
 ---
 
 ## Para Executar o Projeto
